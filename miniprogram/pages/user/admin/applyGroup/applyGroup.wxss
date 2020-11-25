@@ -1,0 +1,95 @@
+.tab {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+}
+
+.list {
+  width: 95%;
+  height: 100rpx;
+  /* background-color: lightblue; */
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: auto auto;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  height: 100rpx;
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image image {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 5px;
+}
+.desc {
+  flex: 120vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.choose {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.choose-confirm{
+  height: 100%;
+  width: 50%;
+  /* border-top-right-radius: 5px; */
+  background-color: lightgreen;
+  border: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choose-cancel {
+  height: 100%;
+  width: 50%;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: lightcoral;
+  border: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: lightseagreen; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40rpx;
+  color: black;
+}
+.time {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: lightslategrey; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30rpx;
+  color: gray;
+}

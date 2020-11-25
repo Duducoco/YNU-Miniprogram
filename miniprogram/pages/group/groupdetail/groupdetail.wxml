@@ -1,0 +1,70 @@
+<view class='tab'>
+  <view class='group-detail' bindtap='tabOne' style='color: {{color1}}; border-bottom-color: {{bordercolor1}};'>部门
+  </view>
+  <view class='group-member' bindtap='tabTwo' style='color: {{color2}}; border-bottom-color: {{bordercolor2}};'>成员
+  </view>
+</view>
+
+
+<view wx:if='{{tabOne}}'>
+  <view class='group-form'>
+    <view class='group-name'>
+      <!-- <label>团队名称</label> -->
+      <view class='group-name-txt'>{{teamName}}</view>
+    </view>
+    <view class='project-name'>
+      <label class='project-name-label'>部长</label>
+      <input class='project-name-txt' placeholder='{{name}}' placeholder-style='color: black;text-align: center;'
+        disabled='true'></input>
+    </view>
+    <view class='project-manager'>
+      <label class='project-manager-label'>副部长</label>
+      <text class='project-manager-txt'>{{name1[0]}}</text>
+    </view>
+    <view class='project-manager'>
+      <label class='project-manager-label'>副部长</label>
+      <text class='project-manager-txt'>{{name1[1]}}</text>
+    </view>
+    <view class='project-manager'>
+      <label class='project-manager-label'>总人数</label>
+      <text class='project-manager-txt'>{{total}}</text>
+    </view>
+    <view class='resources'>
+      <view class='others-title'>简介</view>
+      <textarea class='textarea' value='{{desc}}' maxlength="140" bindinput='detailInput' disabled="{{ctr3}}"></textarea>
+    </view>
+    <view class='button' bindtap='{{bindName}}' hidden="{{ctr}}">{{buttonName}}</view>
+  </view>
+</view>
+
+
+<view wx:else='{{tabTwo}}'>
+  <scroll-view scroll-y="true">
+    <view class='list' wx:for="{{stuff}}" wx:for-index="idx" wx:for-item="itemName"  id='{{idx}}'>
+      <view class='image' bindtap='actionSheetTap' id='{{itemName.id}}'>
+        <image src='{{itemName.headImg}}'></image>
+      </view>
+      <view class='desc' bindtap='actionSheetTap' id='{{itemName.id}}'>
+        <view class='name'>{{itemName.userName}}</view>
+        <view class='time'>{{itemName.pos}}</view>
+      </view>
+      <view class='choose'>
+        <view class='choose-confirm' bindtap='confirm' id='{{itemName.id}}' hidden='{{ctr1}}'>任命</view>
+        <view class='choose-cancel' bindtap='cancel' id='{{itemName.id}}' hidden='{{ctr2}}'>踢出</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item>{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel >取消</action-sheet-cancel>
+</action-sheet>
+
+<action-sheet hidden="{{actionSheetHidden2}}" bindchange="actionSheetChange2">
+    <block wx:for-items="{{actionSheetItems}}" wx:for-index="idx">
+        <action-sheet-item id='{{curid}}' bindtap='bind{{idx}}'>{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel >取消</action-sheet-cancel>
+</action-sheet>

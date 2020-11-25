@@ -1,0 +1,49 @@
+<view class='contact'></view>
+<view class='contact'>
+    <view class='contact-title'>名称</view>
+    <view class='contact-input'><input placeholder='*必填' placeholder-style='color: lightgray;' bindinput='nameInput'></input></view>
+</view>
+
+<view class='category'>
+  <picker bindchange="bindtype" value="{{index}}" range="{{list}}">
+    <view class='picker'>
+      <view class='picker-title'>类型</view>
+      <view class='picker-content'>{{list[index]}}</view>
+      <view class="navigator-arrow" style='margin-left: 40rpx;'></view>
+    </view>
+  </picker>
+</view>
+
+<view class='contact'>
+    <view class='contact-title'>部门</view>
+    <view class='contact-input'><input placeholder="不同部门间用','隔开" placeholder-style='color: lightgray;' bindinput='groupInput'></input></view>
+</view>
+
+
+<view class='category'>
+    <view class='picker' bindtap="pickerShow">
+      <view class='picker-title'>时间</view>
+      <view class='picker-content'>
+        <view>开始:{{startTime}}<view>结束:{{endTime}}</view></view>
+      </view>
+      <view class="navigator-arrow" style='margin-left: 40rpx;'></view>
+    </view>
+</view>
+
+
+<view class='textarea'>
+  <textarea show-confirm-bar='true' placeholder='无' bindinput='textareaInput' value='{{content}}'></textarea>
+</view>
+<view class='tips'>
+  <view style='color: red;font-size: 30rpx;'>*</view>
+  <view style='font-size: 30rpx; color: lightgray;margin-left: 20rpx; color: #C0C0C0;'>签到介绍</view>
+</view>
+<view class='character' style='color: #C0C0C0;'>{{characterNum}}/140</view>
+
+
+
+<view class='button' bindtap='submit'>确定
+</view>
+
+
+<time-picker pickerShow="{{isPickerShow}}" id="picker" wx:if="{{isPickerRender}}" bind:hidePicker="pickerHide" bind:setPickerTime="setPickerTime" config="{{pickerConfig}}"></time-picker>

@@ -1,0 +1,39 @@
+<view class='tab' style='height: {{0.08*windowHeight}}px'>
+    <view class='tab-one' bindtap='tabOne' style='border-bottom: 1px solid {{borderOne}};color: {{colorOne}};'>消息列表
+    </view>
+</view>
+<!-- 消息列表 -->
+<view wx:if='{{tabOne}}'>
+    <scroll-view style='height: {{0.82*windowHeight}}px' scroll-y='true'>
+        <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
+            <view class='list' bindtap='detail' id='{{idx}}'>
+                <view class='group-image'>
+                    <image src='../../images/news.png' style='height: 70rpx; width: 80rpx;'></image>
+                </view>
+                <view class='group-desc'>
+                    <view class='group-name'>{{itemName.title}}</view>
+                    <view class='group-time'>发布时间：{{itemName.date}}</view>
+                </view>
+                <view class='group-status' style='background-color: black;color: white;'>
+                    {{itemName.name}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+
+<view class="model" catchtouchmove='preventTouchMove' wx:if='{{showModal}}'></view>
+<view class="modalDlg" catchtouchmove='preventTouchMove' wx:if='{{showModal}}'>
+  <view class='windowRow'>
+    <text class='userTitle'>消息
+    </text>
+  </view>
+  <view class='wishName'>
+    <input  value='标题：{{title}}'  disabled='true' class='wish_put'></input>
+  </view>
+  <view class='wishName2'>
+    <textarea  value='内容：{{news}}' disabled='true' class='wish_put2'></textarea>
+  </view>
+  <view class='wishbnt'>
+    <button class='wishbnt_bt' bindtap='ok'>确定</button>
+  </view>
+</view>

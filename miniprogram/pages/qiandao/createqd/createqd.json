@@ -1,0 +1,7 @@
+{
+  
+  "navigationBarTitleText": "创建签到",
+  "usingComponents": {
+    "time-picker": "../../../components/timePicker/timePicker"
+  }
+}

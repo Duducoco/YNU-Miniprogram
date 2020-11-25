@@ -1,0 +1,21 @@
+<view class='tab' style='height: {{0.08*windowHeight}}px'>
+  <view class='tab-one' bindtap='tabOne' style='border-bottom: 1px solid {{borderOne}};color: {{colorOne}};'>所有部门</view>
+</view>
+<!-- 我的部门 -->
+<view wx:if='{{tabOne}}'>
+  <scroll-view style='height: {{0.82*windowHeight}}px' scroll-y='true'>
+    <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
+      <view class='list' bindtap='groupDetail' id='{{itemName.id}}'>
+        <view class='group-image'>
+          <image src='../../images/团队.png' style='height: 70rpx; width: 80rpx;'></image>
+        </view>
+        <view class='group-desc'>
+          <view class='group-name'>{{itemName.teamName}}</view>
+          <view class='group-time'>总人数：{{itemName.total}}</view>
+        </view> 
+        <view class='group-status' style='background-color: {{itemName.bgcolor}};color: white;'>{{itemName.teamStatus}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view style='height: {{0.08*windowHeight}}px;' class='button' bindtap='toCreategroup'>部门创建</view>
+</view>

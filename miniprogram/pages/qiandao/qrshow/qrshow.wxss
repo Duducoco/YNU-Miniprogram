@@ -1,0 +1,51 @@
+/* pages/qiandao/qrshow/qrshow.wxss */
+/*遮罩*/
+.mask {
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .modal-container {
+    width: 750rpx;
+    height: 1020rpx;
+    background: #F3F3F3;
+    position: absolute;
+    bottom: 0;
+  }
+  .modal-close {
+    text-align: right;
+    position: absolute;
+    right: 30rpx;
+    top: 20rpx;
+  }
+  .modal-text {
+    font-size: 30rpx;
+    text-align: left;
+    margin-bottom: 20rpx;
+  }
+  .modal-button{
+    width: 100%;
+    padding-top: 52rpx;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+  }
+  .modal-button text{
+    font-size: 20rpx;
+    color:#6B6B6B;
+  }
+  .but{
+    width: 46%;
+    background: #0076BF;
+    color: white;
+    margin-top: 40rpx;
+    margin-bottom: 96rpx;
+  }
+   
+  #corde{
+    width: 100%;
+  }

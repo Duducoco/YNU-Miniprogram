@@ -1,0 +1,39 @@
+<view class='tab' style='height: {{0.08*windowHeight}}px'>
+  <view class='tab-one' bindtap='tabOne' style='border-bottom: 1px solid {{borderOne}};color: {{colorOne}};'>我参与的</view>
+  <view class='tab-two' bindtap='tabTwo' style='border-bottom: 1px solid {{borderTwo}};color: {{colorTwo}};'>我发起的</view>
+</view>
+<!-- 我参与的 -->
+<view wx:if='{{tabOne}}'>
+  <scroll-view style='height: {{0.82*windowHeight}}px' scroll-y='true'>
+    <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
+      <view class='list'  id='{{id}}'>
+        <view class='group-image'>
+          <image src='../../../images/item.png' style='height: 70rpx; width: 80rpx;'></image>
+        </view>
+        <view class='group-desc'>
+          <view class='group-name'>{{itemName.name}}</view>
+          <view class='group-time'>签到次数：{{itemName.nums}}</view>
+        </view>
+        <view class='group-status' style='background-color: black;color: white;'></view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 我发起的 -->
+<view wx:if='{{tabTwo}}'>
+  <scroll-view style='height: {{0.82*windowHeight}}px' scroll-y='true'>
+    <view wx:for="{{list2}}" wx:for-index="idx" wx:for-item="itemName">
+      <view class='list' bindtap='toDetail' id='{{id}}'>
+        <view class='group-image'>
+          <image src='../../../images/item.png' style='height: 70rpx; width: 80rpx;'></image>
+        </view>
+        <view class='group-desc'>
+          <view class='group-name'>{{itemName.info.name}}</view>
+          <view class='group-time'>创建时间：{{itemName.info.start}}</view>
+        </view>
+        <view class='group-status' style='background-color: black;color: white;'></view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,12 @@
+<view class='form' bindtap="applyGroup">
+    <view class='form-title'>团队审核</view>
+    <view class="navigator-arrow" style='margin-left: 70vw;'></view>
+</view>
+<view class='form' bindtap="applyRoom">
+    <view class='form-title'>场地申请</view>
+    <view class="navigator-arrow" style='margin-left: 70vw;'></view>
+</view>
+<view class='form' bindtap="adminGroup">
+    <view class='form-title'>入部申请</view>
+    <view class="navigator-arrow" style='margin-left: 70vw;'></view>
+</view>

@@ -1,0 +1,65 @@
+<view class='tab'>
+    <view class='group-detail' bindtap='tabOne' style='color: {{color1}}; border-bottom-color: {{bordercolor1}};'>介绍
+    </view>
+    <view class='group-member' bindtap='tabTwo' style='color: {{color2}}; border-bottom-color: {{bordercolor2}};'>记录
+    </view>
+</view>
+
+<!-- 介绍详情 -->
+<view wx:if='{{tabOne}}'>
+    <view class='group-form'>
+        <view class='group-name'>
+            <!-- <label>团队名称</label> -->
+            <view class='group-name-txt'>二维码签到</view>
+        </view>
+        <view class='project-name'>
+            <label class='project-name-label'>签到名称</label>
+            <input class='project-name-txt' value='{{list.info.name}}' placeholder-style='color:black;text-align: center;'
+                bindinput='nameInput'></input>
+        </view>
+        <view class='project-start'>
+            <label class='project-start-label'>开始时间</label>
+            <picker class='project-start-picker' mode="date" value="{{list.info.start}}" bindchange="bindStartDateChange">
+                <view>{{list.info.start}}</view>
+            </picker>
+        </view>
+        <view class='project-end'>
+            <label class='project-end-label'>结束时间</label>
+            <picker class='project-end-picker' mode="date" value="{{list.info.deadline}}" bindchange="bindEndDateChange">
+                {{list.info.deadline}}</picker>
+        </view>
+        <view class='project-manager'>
+            <label class='project-manager-label'>创建者</label>
+            <text class='project-manager-txt'>{{owner}}</text>
+        </view>
+        <view class='resources'>
+            <view class='others-title'>简介</view>
+            <textarea class='textarea' value='{{list.info.detail}}'  maxlength="140" bindinput='detailInput'></textarea>
+        </view>
+        <view class='button1' bindtap='qrcode'>二维码</view>
+        <view class='button' bindtap='entered'>保存更改</view>
+    </view>
+</view>
+
+<!-- 记录 -->
+<view wx:else='{{tabTwo}}'>
+    <scroll-view scroll-y="true">
+        <view class='list' wx:for="{{stuff}}" wx:for-index="idx" wx:for-item="itemName" bindtap='actionSheetTap'
+            id='{{itemName.cnt}}'>
+            <view class='image'>
+                <image src='../../../../images/item.png'></image>
+            </view>
+            <view class='desc'>
+                <view class='name'>姓名：{{itemName.name}}</view>
+                <view class='time'>签到次数：{{itemName.j.num}}</view>
+                
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item>{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel >取消</action-sheet-cancel>
+</action-sheet>

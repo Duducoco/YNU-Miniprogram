@@ -1,0 +1,48 @@
+
+<view class='contact'>
+</view>
+<view class='contact'>
+  <view class='contact-title'>姓名</view>
+  <view class='contact-input'><input placeholder='{{name}}' placeholder-style='color: lightgray;' bindinput='nameInput'></input></view>
+</view>
+
+<view class='category'>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{list}}">
+    <view class='picker'>
+      <view class='picker-title'>性别</view>
+      <view class='picker-content'>{{list[index]}}</view>
+      <view class="navigator-arrow" style='margin-left: 40rpx;'></view>
+    </view>
+  </picker>
+</view>
+
+<view class='contact'>
+  <view class='contact-title'>电话</view>
+  <view class='contact-input'><input placeholder='{{phone}}' placeholder-style='color: lightgray;' bindinput='phoneInput'></input></view>
+</view>
+
+<view class='contact'>
+  <view class='contact-title'>学号</view>
+  <view class='contact-input'><input placeholder='{{num}}' placeholder-style='color: lightgray;' bindinput='numInput'></input></view>
+</view>
+
+<view class='contact'>
+  <view class='contact-title'>专业</view>
+  <view class='contact-input'><input placeholder='{{major}}' placeholder-style='color: lightgray;' bindinput='majorInput'></input></view>
+</view>
+
+<view class='contact'>
+  <view class='contact-title'>部门</view>
+  <view class='contact-input'><input placeholder='{{group}}' placeholder-style='color: lightgray;'  disabled='true'></input></view>
+</view>
+
+<view class='contact'>
+  <view class='contact-title'>职务</view>
+  <view class='contact-input'><input placeholder='{{pos}}' placeholder-style='color: lightgray;' disabled='true'></input></view>
+</view>
+
+<view class='submit'>
+  <view class='submit-cancel' bindtap='cancel'>取消</view>
+  <view class='submit-confirm' bindtap='confirm'>保存</view>
+</view>
+

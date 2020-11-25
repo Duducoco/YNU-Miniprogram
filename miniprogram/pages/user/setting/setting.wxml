@@ -1,0 +1,13 @@
+<view class='form' bindtap="infoSetting">
+<view class='form-title'>个人信息</view>
+<view class="navigator-arrow" style='margin-left: 70vw;'></view>
+</view>
+<view class='form' bindtap="imgSetting">
+<view class='form-title'>修改头像</view>
+<view class="navigator-arrow" style='margin-left: 70vw;'></view>
+</view>
+
+
+ <!-- <view class='exit' bindtap="clear">
+退出登录
+</view>  -->

@@ -1,0 +1,6 @@
+<view class="container">
+  <canvas class="canvas-code" canvas-id="canvas" style="background:#fff;width: 200px;height: 200px;" />
+  <view class="modal-button">
+    <button bindtap='savePic' class="g_button">save</button>
+  </view>
+</view>

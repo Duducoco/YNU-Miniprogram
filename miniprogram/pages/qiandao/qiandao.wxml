@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="photo">
+    <image src="{{buttonImg}}" bindtouchstart="touchstart" bindtouchend="touchend"></image>
+    <view class="zi">扫码签到</view>
+</view>

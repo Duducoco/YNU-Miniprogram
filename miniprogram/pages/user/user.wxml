@@ -1,0 +1,52 @@
+<view class='profile'>
+  <view class='avatar'>
+  <image src='{{head_img}}' style='height: 200rpx; width: 200rpx;border-radius: 50%;' mode='scaleToFill'></image>
+  </view>
+  <view class='detail'>
+    <view class='name'>{{nickname}}</view>
+    <!-- <view class='desc'>简介</view> -->
+  </view>
+</view>
+
+<view class='form' bindtap='toJilu'>
+  <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='cloud://wxproject-6gpwqom7fdf8cec0.7778-wxproject-6gpwqom7fdf8cec0-1304009470/图片/记录.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>签到记录</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+<view class='form' bindtap='toGroup'>
+ <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='cloud://wxproject-6gpwqom7fdf8cec0.7778-wxproject-6gpwqom7fdf8cec0-1304009470/图片/团队.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>我的部门</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+<view class='form' bindtap='toAdmin'>
+ <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='cloud://wxproject-6gpwqom7fdf8cec0.7778-wxproject-6gpwqom7fdf8cec0-1304009470/图片/管理1.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>管理者设置</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+
+<view class='form' bindtap='setting'>
+  <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='cloud://wxproject-6gpwqom7fdf8cec0.7778-wxproject-6gpwqom7fdf8cec0-1304009470/图片/设置.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>设置</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+<button open-type="feedback">意见反馈</button>

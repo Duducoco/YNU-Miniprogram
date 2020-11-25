@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/user/user",
+    "pages/qiandao/qiandao",
+    "pages/affair/affair",
+    "pages/group/group",
+    "pages/contest/contest",
+    "pages/qiandao/createqd/createqd",
+    "pages/qiandao/qrshow/qrshow",
+    "pages/qiandao/jilu/jilu",
+    "pages/qiandao/jilu/detail/detail",
+    "pages/login/login",
+    "pages/user/setting/setting",
+    "pages/user/setting/info/info",
+    "pages/user/admin/admin",
+    "pages/user/admin/applyGroup/applyGroup",
+    "pages/user/admin/applyRoom/applyRoom",
+    "pages/user/admin/adminGroup/adminGroup"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#449aeb",
+    "navigationBarTitleText": "信院学生会",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#449aeb",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首 页",
+        "iconPath": "/images/tabbar_menu_studet01.png",
+        "selectedIconPath": "/images/tabbar_menu01_active_student.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消 息",
+        "iconPath": "/images/tabbar_menu02.png",
+        "selectedIconPath": "/images/tabbar_menu02_active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我 的",
+        "iconPath": "/images/tabbar_menu04.png",
+        "selectedIconPath": "/images/tabbar_menu04_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

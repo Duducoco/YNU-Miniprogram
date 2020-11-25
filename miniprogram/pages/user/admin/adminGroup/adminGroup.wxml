@@ -1,0 +1,21 @@
+<view class='tab' style='height: {{0.08*windowHeight}}px'>
+  <view class='tab-one'  style='border-bottom: 1px solid {{borderOne}};color: {{colorOne}};'>入部申请</view>
+</view>
+<scroll-view style='height: {{0.82*windowHeight}}px' scroll-y='true'>
+    <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
+        <view class='list'>
+            <view class='image'>
+                <image src='../../../../images/申请.png'
+                    style='height: 70rpx; width: 80rpx;'></image>
+            </view>
+            <view class='desc'>
+                <view class='name'>{{itemName.name1}}</view>
+                <view class='time'>申请人：{{itemName.name2}}</view>
+            </view>
+            <view class='choose' >
+                <view class='choose-confirm' bindtap='confirm' data-id1='{{itemName.id1}}' data-id2='{{itemName.id2}}' data-group_id='{{itemName.group_id}}'>同意</view>
+                <view class='choose-cancel' bindtap='cancel' data-id1='{{itemName.id1}}' data-id2='{{itemName.id2}}' data-group_id='{{itemName.group_id}}'>拒绝</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

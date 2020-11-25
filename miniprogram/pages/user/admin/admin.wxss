@@ -1,0 +1,16 @@
+@import '../../common/index.wxss';
+
+.form {
+  width: 100vw;
+  height: 8vh;
+  border-top: 10rpx solid lightgray;
+  border-bottom: 10rpx solid lightgray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-title {
+  width: 30vw;
+  /* background-color: red; */
+  text-align: center;
+}
