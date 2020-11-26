@@ -24,7 +24,7 @@
 <view wx:if='{{tabTwo}}'>
   <scroll-view style='height: {{0.82*windowHeight}}px' scroll-y='true'>
     <view wx:for="{{list2}}" wx:for-index="idx" wx:for-item="itemName">
-      <view class='list' bindtap='toDetail' id='{{id}}'>
+      <view class='list' bindtap='toDetail' id='{{idx}}'>
         <view class='group-image'>
           <image src='../../../images/item.png' style='height: 70rpx; width: 80rpx;'></image>
         </view>

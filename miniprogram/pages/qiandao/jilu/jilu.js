@@ -123,11 +123,11 @@ Page({
   },
 
   toDetail(e) {
-    console.log(e)
+    console.log(e.currentTarget.id)
     var data=this.data.list2
     console.log(data)
     wx.navigateTo({
-      url: './detail/detail?qrid='+data[0]._id
+      url: './detail/detail?qrid='+data[e.currentTarget.id]._id
     })
   },
 

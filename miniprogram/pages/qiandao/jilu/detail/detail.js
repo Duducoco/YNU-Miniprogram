@@ -29,7 +29,7 @@ Page({
      */
     onLoad: async function (options) {
       var that=this;
-      console.log(options)
+      console.log('option:',options)
       this.setData({
         qrid:options.qrid
       })
